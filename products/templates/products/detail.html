@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content%}
+{% if error%}
+{{error}}
+<br/>
+<br/>
+{% endif %}
+
+{% load static %}
+
+<div style="border-left:2px solid #000000;border-right:2px solid #000000;border-bottom:2px solid #000000;border-top:4px solid #000000; padding:2px 0px 2px 2px">
+<div class="row" >
+  <div class="col-12 col-sm-4 align-self-center">
+    <img src="{{product.image.url}}" class="img-fluid" width="180" height="140"/>
+  </div>
+  <div class="col-12 col-sm-7 align-self-center">
+    <strong>{{product.title}}</strong><br/>
+    {{product.description}}<br/>
+    {{product.contact}}<br/>
+    Mobile:{{product.number}}
+</div>
+</div>
+</div>
+
+
+{% endblock %}
